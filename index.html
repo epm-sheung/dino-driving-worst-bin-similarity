@@ -129,5 +129,11 @@ can be compared against raw H/J above and against the fused reports.</p>
 <b>Option A</b> (single tower) pulls together scenes with similar ego maneuver (action-defined positives).
 <b>Option B</b> (two-tower CLIP) aligns each scene's appearance embedding with its own action embedding,
 symmetric InfoNCE. Trained on the 1000 corpus scenes (6 queries held out), appearance = "combined" mask.
-<i>(Reports generating — will appear here shortly, together with the SAM3 mask-overlay update across all pages.)</i></p>
+Action-agreement (J/combined): raw 0.127 → Option A 0.353, Option B 0.303.</p>
+<div class="cards">
+<a class="card" href="worst_hj/report_H_combined_headA.html"><div class="icon">🅰️</div><div class="label">H · Option A</div><div class="desc">align appearance→action</div></a>
+<a class="card" href="worst_hj/report_H_combined_headB.html"><div class="icon">🅱️</div><div class="label">H · Option B</div><div class="desc">two-tower CLIP</div></a>
+<a class="card" href="worst_hj/report_J_combined_headA.html"><div class="icon">🅰️</div><div class="label">J · Option A</div><div class="desc">align appearance→action</div></a>
+<a class="card" href="worst_hj/report_J_combined_headB.html"><div class="icon">🅱️</div><div class="label">J · Option B</div><div class="desc">two-tower CLIP</div></a>
+</div>
 </body></html>
