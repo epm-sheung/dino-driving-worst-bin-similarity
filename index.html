@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"/>
+<title>Worst-1% Scene Similarity — 3 methods</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #14161a; color: #e6e8eb; font-family: 'Segoe UI', system-ui, sans-serif;
+       padding: 48px 20px 80px; max-width: 1100px; margin: 0 auto; line-height: 1.5; }
+h1 { font-size: 26px; color: #fff; margin-bottom: 6px; }
+h2 { font-size: 17px; color: #cdd3dc; margin: 38px 0 6px; }
+p.sub { color: #9aa1ad; font-size: 13.5px; margin-bottom: 8px; }
+p.method { color: #9aa1ad; font-size: 13px; margin-bottom: 16px; max-width: 880px; }
+code { background: #20242b; padding: 1px 5px; border-radius: 4px; font-size: 12px; color: #cdd3dc; }
+.queries { background: #1b1e24; border: 1px solid #2c303a; border-radius: 8px;
+           padding: 14px 18px; margin: 14px 0 8px; font-size: 12.5px; color: #b9c0cc; }
+.queries table { border-collapse: collapse; width: 100%; }
+.queries th, .queries td { text-align: left; padding: 4px 10px; border-bottom: 1px solid #262a33; }
+.queries th { color: #9aa1ad; font-weight: 600; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.4px; }
+.queries td.mono { font-family: monospace; color: #8a919d; }
+.cards { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 6px; }
+.card { background: #20242b; border: 1px solid #2c303a; border-radius: 8px;
+        padding: 22px 26px; text-align: center; text-decoration: none; color: #e6e8eb;
+        transition: background 0.15s, border-color 0.15s; min-width: 170px; }
+.card:hover { background: #262a33; border-color: #5da9ff; }
+.card .icon { font-size: 32px; margin-bottom: 10px; }
+.card .label { font-size: 15px; font-weight: 600; color: #fff; }
+.card .desc { font-size: 11.5px; color: #9aa1ad; margin-top: 5px; }
+</style>
+</head><body>
+<h1>Worst-1% Scene Similarity</h1>
+<p class="sub">For each of the 6 worst-1% val samples (highest per-sample prediction loss), the most similar
+val scenes retrieved by 3 independent methods. 5-level stratified retrieval (level 1 = most similar →
+level 5 = least), the query's own scene self-excluded.</p>
+
+<div class="queries">
+<table>
+<tr><th>#</th><th>scene</th><th>uuid</th><th>loss</th><th>ADE</th><th>FDE</th><th>speed</th></tr>
+<tr><td>1</td><td>scene_1102</td><td class="mono">a2547123…</td><td>2.03</td><td>21.4 m</td><td>—</td><td>120 km/h</td></tr>
+<tr><td>2</td><td>scene_5629</td><td class="mono">85ab7b56…</td><td colspan="4">high-loss val window</td></tr>
+<tr><td>3</td><td>scene_6714</td><td class="mono">836557af…</td><td colspan="4">high-loss val window</td></tr>
+<tr><td>4</td><td>scene_4059</td><td class="mono">ec6ea0eb…</td><td colspan="4">high-loss val window</td></tr>
+<tr><td>5</td><td>scene_6676</td><td class="mono">1e1fea81…</td><td colspan="4">high-loss val window</td></tr>
+<tr><td>6</td><td>scene_3517</td><td class="mono">bd7ef9ee…</td><td>0.51</td><td>—</td><td>—</td><td>~2 km/h</td></tr>
+</table>
+</div>
+
+<h2>Method 1 — Trajectory-latent similarity</h2>
+<p class="method">GT future-trajectory velocity (per-channel whitened) encoded by a frozen autoencoder
+(<code>latent_dim=4</code>), cosine similarity. Query = the exact worst window (by <code>ds_idx</code>);
+corpus = full val, scene-level (6968 scenes, one window each). No model prediction involved — pure
+trajectory dynamics. Query captions show loss / ADE / speed.</p>
+<div class="cards">
+<a class="card" href="traj_similarity_worst1/traj_similarity_report.html"><div class="icon">🛰️</div>
+<div class="label">Trajectory</div><div class="desc">GT future-trajectory dynamics</div></a>
+</div>
+
+<h2>Methods 2 &amp; 3 — SAM3 video similarity (DINOv2)</h2>
+<p class="method">SAM3-masked 4-frame past trajectory (frames 0/4/8/12) → DINOv2 <code>dinov2_vitb14</code>
+<code>forward_features</code>, per-frame L2-normalized then averaged. <b>Method H</b> = averaged CLS token,
+<b>Method J</b> = averaged mean-patch token. Corpus = 1006 val scenes (the 6 queries + 1000 random),
+freshly segmented with SAM3. Four mask classes; "combined" = road + vehicle + pedestrian embedded
+separately and concatenated (2304-dim). Each report uses the same layout and trajectory-clip cells as
+Method 1 — only the retrieval metric differs, so the methods can be compared scene-for-scene.</p>
+<h3 style="opacity:.8;margin:18px 0 6px">Method H — averaged CLS</h3>
+<div class="cards">
+<a class="card" href="worst_hj/report_H_road.html"><div class="icon">🛣️</div>
+<div class="label">Road</div><div class="desc">H · road mask</div></a>
+<a class="card" href="worst_hj/report_H_vehicle.html"><div class="icon">🚗</div>
+<div class="label">Vehicle</div><div class="desc">H · vehicle mask</div></a>
+<a class="card" href="worst_hj/report_H_pedestrian.html"><div class="icon">🚶</div>
+<div class="label">Pedestrian</div><div class="desc">H · pedestrian mask</div></a>
+<a class="card" href="worst_hj/report_H_combined.html"><div class="icon">🗺️</div>
+<div class="label">Combined</div><div class="desc">H · road+veh+ped</div></a>
+</div>
+<h3 style="opacity:.8;margin:18px 0 6px">Method J — averaged mean-patch</h3>
+<div class="cards">
+<a class="card" href="worst_hj/report_J_road.html"><div class="icon">🛣️</div>
+<div class="label">Road</div><div class="desc">J · road mask</div></a>
+<a class="card" href="worst_hj/report_J_vehicle.html"><div class="icon">🚗</div>
+<div class="label">Vehicle</div><div class="desc">J · vehicle mask</div></a>
+<a class="card" href="worst_hj/report_J_pedestrian.html"><div class="icon">🚶</div>
+<div class="label">Pedestrian</div><div class="desc">J · pedestrian mask</div></a>
+<a class="card" href="worst_hj/report_J_combined.html"><div class="icon">🗺️</div>
+<div class="label">Combined</div><div class="desc">J · road+veh+ped</div></a>
+</div>
+
+<h2>Method 4 — Late fusion (appearance + action)</h2>
+<p class="method">Joint cosine = <code>0.5·appearance + 0.5·action</code>, where appearance is the whitened
+SAM3/DINOv2 feature (top-2 common directions removed) and action is the Method-1 velocity-latent
+(GT future velocity → frozen autoencoder, dim-4). Retrieves scenes that <b>look similar AND move
+similarly</b>, so a turning query no longer matches straight-driving scenes. Same Method-1 layout.</p>
+<h3 style="opacity:.8;margin:18px 0 6px">Fused — Method H appearance</h3>
+<div class="cards">
+<a class="card" href="worst_hj/report_H_road_fused.html"><div class="icon">🛣️</div><div class="label">Road</div><div class="desc">H⊕action</div></a>
+<a class="card" href="worst_hj/report_H_vehicle_fused.html"><div class="icon">🚗</div><div class="label">Vehicle</div><div class="desc">H⊕action</div></a>
+<a class="card" href="worst_hj/report_H_pedestrian_fused.html"><div class="icon">🚶</div><div class="label">Pedestrian</div><div class="desc">H⊕action</div></a>
+<a class="card" href="worst_hj/report_H_combined_fused.html"><div class="icon">🗺️</div><div class="label">Combined</div><div class="desc">H⊕action</div></a>
+</div>
+<h3 style="opacity:.8;margin:18px 0 6px">Fused — Method J appearance</h3>
+<div class="cards">
+<a class="card" href="worst_hj/report_J_road_fused.html"><div class="icon">🛣️</div><div class="label">Road</div><div class="desc">J⊕action</div></a>
+<a class="card" href="worst_hj/report_J_vehicle_fused.html"><div class="icon">🚗</div><div class="label">Vehicle</div><div class="desc">J⊕action</div></a>
+<a class="card" href="worst_hj/report_J_pedestrian_fused.html"><div class="icon">🚶</div><div class="label">Pedestrian</div><div class="desc">J⊕action</div></a>
+<a class="card" href="worst_hj/report_J_combined_fused.html"><div class="icon">🗺️</div><div class="label">Combined</div><div class="desc">J⊕action</div></a>
+</div>
+
+<h2>Whitened appearance (ablation for Method 4)</h2>
+<p class="method">Appearance only, with the top-2 DINOv2 principal directions (the "common component" that
+inflates every cosine) removed and re-normalized — no action signal. Shown so the effect of whitening
+can be compared against raw H/J above and against the fused reports.</p>
+<h3 style="opacity:.8;margin:18px 0 6px">Whitened — Method H</h3>
+<div class="cards">
+<a class="card" href="worst_hj/report_H_road_white.html"><div class="icon">🛣️</div><div class="label">Road</div><div class="desc">H whitened</div></a>
+<a class="card" href="worst_hj/report_H_vehicle_white.html"><div class="icon">🚗</div><div class="label">Vehicle</div><div class="desc">H whitened</div></a>
+<a class="card" href="worst_hj/report_H_pedestrian_white.html"><div class="icon">🚶</div><div class="label">Pedestrian</div><div class="desc">H whitened</div></a>
+<a class="card" href="worst_hj/report_H_combined_white.html"><div class="icon">🗺️</div><div class="label">Combined</div><div class="desc">H whitened</div></a>
+</div>
+<h3 style="opacity:.8;margin:18px 0 6px">Whitened — Method J</h3>
+<div class="cards">
+<a class="card" href="worst_hj/report_J_road_white.html"><div class="icon">🛣️</div><div class="label">Road</div><div class="desc">J whitened</div></a>
+<a class="card" href="worst_hj/report_J_vehicle_white.html"><div class="icon">🚗</div><div class="label">Vehicle</div><div class="desc">J whitened</div></a>
+<a class="card" href="worst_hj/report_J_pedestrian_white.html"><div class="icon">🚶</div><div class="label">Pedestrian</div><div class="desc">J whitened</div></a>
+<a class="card" href="worst_hj/report_J_combined_white.html"><div class="icon">🗺️</div><div class="label">Combined</div><div class="desc">J whitened</div></a>
+</div>
+
+<h2>Method 5 — Learned contrastive heads (frozen backbones)</h2>
+<p class="method">A small MLP projection head trained on top of the frozen appearance feature so that
+<b>appearance retrieval respects action</b> — no action feature needed at query time.
+<b>Option A</b> (single tower) pulls together scenes with similar ego maneuver (action-defined positives).
+<b>Option B</b> (two-tower CLIP) aligns each scene's appearance embedding with its own action embedding,
+symmetric InfoNCE. Trained on the 1000 corpus scenes (6 queries held out), appearance = "combined" mask.
+<i>(Reports generating — will appear here shortly, together with the SAM3 mask-overlay update across all pages.)</i></p>
+</body></html>

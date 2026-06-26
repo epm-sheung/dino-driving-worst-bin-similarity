@@ -1,0 +1,914 @@
+[
+  {
+    "query_idx": -1,
+    "query_scene_id": "scene_1102",
+    "query_uuid": null,
+    "query_ds_idx": 2205,
+    "query_loss": 2.027567148208618,
+    "query_ade": 21.370697021484375,
+    "query_fde": 50.128944396972656,
+    "query_speed": 119.8,
+    "matches": [
+      {
+        "level": 1,
+        "rank": 1,
+        "scene_idx": 5739,
+        "scene_id": "5739",
+        "score": 0.9960408806800842
+      },
+      {
+        "level": 1,
+        "rank": 2,
+        "scene_idx": 3195,
+        "scene_id": "3195",
+        "score": 0.633169949054718
+      },
+      {
+        "level": 1,
+        "rank": 3,
+        "scene_idx": 6810,
+        "scene_id": "6810",
+        "score": 0.40892234444618225
+      },
+      {
+        "level": 1,
+        "rank": 4,
+        "scene_idx": 6667,
+        "scene_id": "6667",
+        "score": 0.2865401804447174
+      },
+      {
+        "level": 2,
+        "rank": 1,
+        "scene_idx": 4635,
+        "scene_id": "4635",
+        "score": 0.28605830669403076
+      },
+      {
+        "level": 2,
+        "rank": 2,
+        "scene_idx": 6857,
+        "scene_id": "6857",
+        "score": 0.22228263318538666
+      },
+      {
+        "level": 2,
+        "rank": 3,
+        "scene_idx": 950,
+        "scene_id": "950",
+        "score": 0.17828220129013062
+      },
+      {
+        "level": 2,
+        "rank": 4,
+        "scene_idx": 3151,
+        "scene_id": "3151",
+        "score": 0.14208513498306274
+      },
+      {
+        "level": 3,
+        "rank": 1,
+        "scene_idx": 6088,
+        "scene_id": "6088",
+        "score": 0.1420600265264511
+      },
+      {
+        "level": 3,
+        "rank": 2,
+        "scene_idx": 5913,
+        "scene_id": "5913",
+        "score": 0.11160020530223846
+      },
+      {
+        "level": 3,
+        "rank": 3,
+        "scene_idx": 5673,
+        "scene_id": "5673",
+        "score": 0.08587761968374252
+      },
+      {
+        "level": 3,
+        "rank": 4,
+        "scene_idx": 6361,
+        "scene_id": "6361",
+        "score": 0.057522792369127274
+      },
+      {
+        "level": 4,
+        "rank": 1,
+        "scene_idx": 5100,
+        "scene_id": "5100",
+        "score": 0.057350873947143555
+      },
+      {
+        "level": 4,
+        "rank": 2,
+        "scene_idx": 1948,
+        "scene_id": "1948",
+        "score": 0.01784486696124077
+      },
+      {
+        "level": 4,
+        "rank": 3,
+        "scene_idx": 821,
+        "scene_id": "821",
+        "score": -0.03483887389302254
+      },
+      {
+        "level": 4,
+        "rank": 4,
+        "scene_idx": 822,
+        "scene_id": "822",
+        "score": -0.09634469449520111
+      },
+      {
+        "level": 5,
+        "rank": 1,
+        "scene_idx": 6224,
+        "scene_id": "6224",
+        "score": -0.09644116461277008
+      },
+      {
+        "level": 5,
+        "rank": 2,
+        "scene_idx": 2911,
+        "scene_id": "2911",
+        "score": -0.16576966643333435
+      },
+      {
+        "level": 5,
+        "rank": 3,
+        "scene_idx": 4656,
+        "scene_id": "4656",
+        "score": -0.2911771237850189
+      },
+      {
+        "level": 5,
+        "rank": 4,
+        "scene_idx": 482,
+        "scene_id": "482",
+        "score": -0.9284846186637878
+      }
+    ]
+  },
+  {
+    "query_idx": -2,
+    "query_scene_id": "scene_5629",
+    "query_uuid": null,
+    "query_ds_idx": 11258,
+    "query_loss": 0.7804378271102905,
+    "query_ade": 5.7458720207214355,
+    "query_fde": 13.799324035644531,
+    "query_speed": 26.07,
+    "matches": [
+      {
+        "level": 1,
+        "rank": 1,
+        "scene_idx": 5629,
+        "scene_id": "5629",
+        "score": 1.0
+      },
+      {
+        "level": 1,
+        "rank": 2,
+        "scene_idx": 6294,
+        "scene_id": "6294",
+        "score": 0.8891806602478027
+      },
+      {
+        "level": 1,
+        "rank": 3,
+        "scene_idx": 6360,
+        "scene_id": "6360",
+        "score": 0.7293928861618042
+      },
+      {
+        "level": 1,
+        "rank": 4,
+        "scene_idx": 1379,
+        "scene_id": "1379",
+        "score": 0.5257380604743958
+      },
+      {
+        "level": 2,
+        "rank": 1,
+        "scene_idx": 2805,
+        "scene_id": "2805",
+        "score": 0.5255955457687378
+      },
+      {
+        "level": 2,
+        "rank": 2,
+        "scene_idx": 1647,
+        "scene_id": "1647",
+        "score": 0.37359803915023804
+      },
+      {
+        "level": 2,
+        "rank": 3,
+        "scene_idx": 2468,
+        "scene_id": "2468",
+        "score": 0.31617170572280884
+      },
+      {
+        "level": 2,
+        "rank": 4,
+        "scene_idx": 5316,
+        "scene_id": "5316",
+        "score": 0.2944353520870209
+      },
+      {
+        "level": 3,
+        "rank": 1,
+        "scene_idx": 5771,
+        "scene_id": "5771",
+        "score": 0.2944178581237793
+      },
+      {
+        "level": 3,
+        "rank": 2,
+        "scene_idx": 5924,
+        "scene_id": "5924",
+        "score": 0.2693570554256439
+      },
+      {
+        "level": 3,
+        "rank": 3,
+        "scene_idx": 25,
+        "scene_id": "25",
+        "score": 0.19719061255455017
+      },
+      {
+        "level": 3,
+        "rank": 4,
+        "scene_idx": 1644,
+        "scene_id": "1644",
+        "score": 0.03489599749445915
+      },
+      {
+        "level": 4,
+        "rank": 1,
+        "scene_idx": 1361,
+        "scene_id": "1361",
+        "score": 0.03487188369035721
+      },
+      {
+        "level": 4,
+        "rank": 2,
+        "scene_idx": 3981,
+        "scene_id": "3981",
+        "score": -0.12015455216169357
+      },
+      {
+        "level": 4,
+        "rank": 3,
+        "scene_idx": 6619,
+        "scene_id": "6619",
+        "score": -0.20467500388622284
+      },
+      {
+        "level": 4,
+        "rank": 4,
+        "scene_idx": 2305,
+        "scene_id": "2305",
+        "score": -0.3515961766242981
+      },
+      {
+        "level": 5,
+        "rank": 1,
+        "scene_idx": 2263,
+        "scene_id": "2263",
+        "score": -0.35166463255882263
+      },
+      {
+        "level": 5,
+        "rank": 2,
+        "scene_idx": 5730,
+        "scene_id": "5730",
+        "score": -0.5902217030525208
+      },
+      {
+        "level": 5,
+        "rank": 3,
+        "scene_idx": 1661,
+        "scene_id": "1661",
+        "score": -0.8089993000030518
+      },
+      {
+        "level": 5,
+        "rank": 4,
+        "scene_idx": 1150,
+        "scene_id": "1150",
+        "score": -0.9974786043167114
+      }
+    ]
+  },
+  {
+    "query_idx": -3,
+    "query_scene_id": "scene_6714",
+    "query_uuid": null,
+    "query_ds_idx": 13429,
+    "query_loss": 0.6430547833442688,
+    "query_ade": 4.14124870300293,
+    "query_fde": 8.633305549621582,
+    "query_speed": 4.9,
+    "matches": [
+      {
+        "level": 1,
+        "rank": 1,
+        "scene_idx": 599,
+        "scene_id": "599",
+        "score": 0.9999138116836548
+      },
+      {
+        "level": 1,
+        "rank": 2,
+        "scene_idx": 1120,
+        "scene_id": "1120",
+        "score": 0.777632474899292
+      },
+      {
+        "level": 1,
+        "rank": 3,
+        "scene_idx": 1191,
+        "scene_id": "1191",
+        "score": 0.5472916960716248
+      },
+      {
+        "level": 1,
+        "rank": 4,
+        "scene_idx": 6759,
+        "scene_id": "6759",
+        "score": 0.4859999716281891
+      },
+      {
+        "level": 2,
+        "rank": 1,
+        "scene_idx": 4451,
+        "scene_id": "4451",
+        "score": 0.48598340153694153
+      },
+      {
+        "level": 2,
+        "rank": 2,
+        "scene_idx": 593,
+        "scene_id": "593",
+        "score": 0.47012951970100403
+      },
+      {
+        "level": 2,
+        "rank": 3,
+        "scene_idx": 5608,
+        "scene_id": "5608",
+        "score": 0.44032689929008484
+      },
+      {
+        "level": 2,
+        "rank": 4,
+        "scene_idx": 2053,
+        "scene_id": "2053",
+        "score": 0.38014838099479675
+      },
+      {
+        "level": 3,
+        "rank": 1,
+        "scene_idx": 1650,
+        "scene_id": "1650",
+        "score": 0.3800722360610962
+      },
+      {
+        "level": 3,
+        "rank": 2,
+        "scene_idx": 4674,
+        "scene_id": "4674",
+        "score": 0.269490510225296
+      },
+      {
+        "level": 3,
+        "rank": 3,
+        "scene_idx": 4121,
+        "scene_id": "4121",
+        "score": 0.0984334722161293
+      },
+      {
+        "level": 3,
+        "rank": 4,
+        "scene_idx": 2498,
+        "scene_id": "2498",
+        "score": -0.1024886965751648
+      },
+      {
+        "level": 4,
+        "rank": 1,
+        "scene_idx": 1752,
+        "scene_id": "1752",
+        "score": -0.10257985442876816
+      },
+      {
+        "level": 4,
+        "rank": 2,
+        "scene_idx": 4156,
+        "scene_id": "4156",
+        "score": -0.25805288553237915
+      },
+      {
+        "level": 4,
+        "rank": 3,
+        "scene_idx": 4724,
+        "scene_id": "4724",
+        "score": -0.3654085099697113
+      },
+      {
+        "level": 4,
+        "rank": 4,
+        "scene_idx": 3617,
+        "scene_id": "3617",
+        "score": -0.424002468585968
+      },
+      {
+        "level": 5,
+        "rank": 1,
+        "scene_idx": 5012,
+        "scene_id": "5012",
+        "score": -0.42402586340904236
+      },
+      {
+        "level": 5,
+        "rank": 2,
+        "scene_idx": 461,
+        "scene_id": "461",
+        "score": -0.5179722309112549
+      },
+      {
+        "level": 5,
+        "rank": 3,
+        "scene_idx": 194,
+        "scene_id": "194",
+        "score": -0.6725116968154907
+      },
+      {
+        "level": 5,
+        "rank": 4,
+        "scene_idx": 1931,
+        "scene_id": "1931",
+        "score": -0.9985523223876953
+      }
+    ]
+  },
+  {
+    "query_idx": -4,
+    "query_scene_id": "scene_4059",
+    "query_uuid": null,
+    "query_ds_idx": 8118,
+    "query_loss": 0.5807797908782959,
+    "query_ade": 6.004645347595215,
+    "query_fde": 13.499861717224121,
+    "query_speed": 48.5,
+    "matches": [
+      {
+        "level": 1,
+        "rank": 1,
+        "scene_idx": 4059,
+        "scene_id": "4059",
+        "score": 1.0000001192092896
+      },
+      {
+        "level": 1,
+        "rank": 2,
+        "scene_idx": 5237,
+        "scene_id": "5237",
+        "score": 0.9209723472595215
+      },
+      {
+        "level": 1,
+        "rank": 3,
+        "scene_idx": 996,
+        "scene_id": "996",
+        "score": 0.8764254450798035
+      },
+      {
+        "level": 1,
+        "rank": 4,
+        "scene_idx": 1206,
+        "scene_id": "1206",
+        "score": 0.7452197670936584
+      },
+      {
+        "level": 2,
+        "rank": 1,
+        "scene_idx": 4048,
+        "scene_id": "4048",
+        "score": 0.7448959350585938
+      },
+      {
+        "level": 2,
+        "rank": 2,
+        "scene_idx": 718,
+        "scene_id": "718",
+        "score": 0.5081894993782043
+      },
+      {
+        "level": 2,
+        "rank": 3,
+        "scene_idx": 504,
+        "scene_id": "504",
+        "score": 0.2420576512813568
+      },
+      {
+        "level": 2,
+        "rank": 4,
+        "scene_idx": 6339,
+        "scene_id": "6339",
+        "score": 0.012711246497929096
+      },
+      {
+        "level": 3,
+        "rank": 1,
+        "scene_idx": 1602,
+        "scene_id": "1602",
+        "score": 0.012569648213684559
+      },
+      {
+        "level": 3,
+        "rank": 2,
+        "scene_idx": 357,
+        "scene_id": "357",
+        "score": -0.12835946679115295
+      },
+      {
+        "level": 3,
+        "rank": 3,
+        "scene_idx": 2978,
+        "scene_id": "2978",
+        "score": -0.2819291949272156
+      },
+      {
+        "level": 3,
+        "rank": 4,
+        "scene_idx": 4349,
+        "scene_id": "4349",
+        "score": -0.431881308555603
+      },
+      {
+        "level": 4,
+        "rank": 1,
+        "scene_idx": 4545,
+        "scene_id": "4545",
+        "score": -0.43200138211250305
+      },
+      {
+        "level": 4,
+        "rank": 2,
+        "scene_idx": 5578,
+        "scene_id": "5578",
+        "score": -0.5778447985649109
+      },
+      {
+        "level": 4,
+        "rank": 3,
+        "scene_idx": 24,
+        "scene_id": "24",
+        "score": -0.7271801233291626
+      },
+      {
+        "level": 4,
+        "rank": 4,
+        "scene_idx": 2979,
+        "scene_id": "2979",
+        "score": -0.8230659365653992
+      },
+      {
+        "level": 5,
+        "rank": 1,
+        "scene_idx": 5373,
+        "scene_id": "5373",
+        "score": -0.8232355713844299
+      },
+      {
+        "level": 5,
+        "rank": 2,
+        "scene_idx": 3514,
+        "scene_id": "3514",
+        "score": -0.8945940136909485
+      },
+      {
+        "level": 5,
+        "rank": 3,
+        "scene_idx": 6731,
+        "scene_id": "6731",
+        "score": -0.9435431361198425
+      },
+      {
+        "level": 5,
+        "rank": 4,
+        "scene_idx": 1683,
+        "scene_id": "1683",
+        "score": -0.9968367218971252
+      }
+    ]
+  },
+  {
+    "query_idx": -5,
+    "query_scene_id": "scene_6676",
+    "query_uuid": null,
+    "query_ds_idx": 13353,
+    "query_loss": 0.5408084392547607,
+    "query_ade": 3.4006166458129883,
+    "query_fde": 8.293580055236816,
+    "query_speed": 14.98,
+    "matches": [
+      {
+        "level": 1,
+        "rank": 1,
+        "scene_idx": 226,
+        "scene_id": "226",
+        "score": 0.9988475441932678
+      },
+      {
+        "level": 1,
+        "rank": 2,
+        "scene_idx": 243,
+        "scene_id": "243",
+        "score": 0.846876323223114
+      },
+      {
+        "level": 1,
+        "rank": 3,
+        "scene_idx": 840,
+        "scene_id": "840",
+        "score": 0.7479619383811951
+      },
+      {
+        "level": 1,
+        "rank": 4,
+        "scene_idx": 6336,
+        "scene_id": "6336",
+        "score": 0.7175378203392029
+      },
+      {
+        "level": 2,
+        "rank": 1,
+        "scene_idx": 402,
+        "scene_id": "402",
+        "score": 0.7174119353294373
+      },
+      {
+        "level": 2,
+        "rank": 2,
+        "scene_idx": 3842,
+        "scene_id": "3842",
+        "score": 0.678047776222229
+      },
+      {
+        "level": 2,
+        "rank": 3,
+        "scene_idx": 593,
+        "scene_id": "593",
+        "score": 0.6229677200317383
+      },
+      {
+        "level": 2,
+        "rank": 4,
+        "scene_idx": 4750,
+        "scene_id": "4750",
+        "score": 0.5561303496360779
+      },
+      {
+        "level": 3,
+        "rank": 1,
+        "scene_idx": 4498,
+        "scene_id": "4498",
+        "score": 0.5560861229896545
+      },
+      {
+        "level": 3,
+        "rank": 2,
+        "scene_idx": 3608,
+        "scene_id": "3608",
+        "score": 0.44065701961517334
+      },
+      {
+        "level": 3,
+        "rank": 3,
+        "scene_idx": 3484,
+        "scene_id": "3484",
+        "score": 0.22749124467372894
+      },
+      {
+        "level": 3,
+        "rank": 4,
+        "scene_idx": 4701,
+        "scene_id": "4701",
+        "score": -0.014072516933083534
+      },
+      {
+        "level": 4,
+        "rank": 1,
+        "scene_idx": 2141,
+        "scene_id": "2141",
+        "score": -0.014820725657045841
+      },
+      {
+        "level": 4,
+        "rank": 2,
+        "scene_idx": 592,
+        "scene_id": "592",
+        "score": -0.2290685623884201
+      },
+      {
+        "level": 4,
+        "rank": 3,
+        "scene_idx": 4321,
+        "scene_id": "4321",
+        "score": -0.39368534088134766
+      },
+      {
+        "level": 4,
+        "rank": 4,
+        "scene_idx": 1798,
+        "scene_id": "1798",
+        "score": -0.5301937460899353
+      },
+      {
+        "level": 5,
+        "rank": 1,
+        "scene_idx": 2851,
+        "scene_id": "2851",
+        "score": -0.5306153893470764
+      },
+      {
+        "level": 5,
+        "rank": 2,
+        "scene_idx": 1768,
+        "scene_id": "1768",
+        "score": -0.5938628315925598
+      },
+      {
+        "level": 5,
+        "rank": 3,
+        "scene_idx": 2461,
+        "scene_id": "2461",
+        "score": -0.7149883508682251
+      },
+      {
+        "level": 5,
+        "rank": 4,
+        "scene_idx": 5413,
+        "scene_id": "5413",
+        "score": -0.9895682334899902
+      }
+    ]
+  },
+  {
+    "query_idx": -6,
+    "query_scene_id": "scene_3517",
+    "query_uuid": null,
+    "query_ds_idx": 7034,
+    "query_loss": 0.5120348334312439,
+    "query_ade": 4.151620864868164,
+    "query_fde": 9.362435340881348,
+    "query_speed": 2.14,
+    "matches": [
+      {
+        "level": 1,
+        "rank": 1,
+        "scene_idx": 3517,
+        "scene_id": "3517",
+        "score": 1.0000001192092896
+      },
+      {
+        "level": 1,
+        "rank": 2,
+        "scene_idx": 5785,
+        "scene_id": "5785",
+        "score": 0.7962048649787903
+      },
+      {
+        "level": 1,
+        "rank": 3,
+        "scene_idx": 3264,
+        "scene_id": "3264",
+        "score": 0.5884340405464172
+      },
+      {
+        "level": 1,
+        "rank": 4,
+        "scene_idx": 4415,
+        "scene_id": "4415",
+        "score": 0.5488206148147583
+      },
+      {
+        "level": 2,
+        "rank": 1,
+        "scene_idx": 4504,
+        "scene_id": "4504",
+        "score": 0.5487785935401917
+      },
+      {
+        "level": 2,
+        "rank": 2,
+        "scene_idx": 1570,
+        "scene_id": "1570",
+        "score": 0.5341470241546631
+      },
+      {
+        "level": 2,
+        "rank": 3,
+        "scene_idx": 5965,
+        "scene_id": "5965",
+        "score": 0.49981534481048584
+      },
+      {
+        "level": 2,
+        "rank": 4,
+        "scene_idx": 5936,
+        "scene_id": "5936",
+        "score": 0.42121270298957825
+      },
+      {
+        "level": 3,
+        "rank": 1,
+        "scene_idx": 3409,
+        "scene_id": "3409",
+        "score": 0.42090511322021484
+      },
+      {
+        "level": 3,
+        "rank": 2,
+        "scene_idx": 4981,
+        "scene_id": "4981",
+        "score": 0.28819605708122253
+      },
+      {
+        "level": 3,
+        "rank": 3,
+        "scene_idx": 2194,
+        "scene_id": "2194",
+        "score": 0.09387219697237015
+      },
+      {
+        "level": 3,
+        "rank": 4,
+        "scene_idx": 1450,
+        "scene_id": "1450",
+        "score": -0.12161211669445038
+      },
+      {
+        "level": 4,
+        "rank": 1,
+        "scene_idx": 98,
+        "scene_id": "98",
+        "score": -0.12173169106245041
+      },
+      {
+        "level": 4,
+        "rank": 2,
+        "scene_idx": 1474,
+        "scene_id": "1474",
+        "score": -0.2748105525970459
+      },
+      {
+        "level": 4,
+        "rank": 3,
+        "scene_idx": 3885,
+        "scene_id": "3885",
+        "score": -0.40360167622566223
+      },
+      {
+        "level": 4,
+        "rank": 4,
+        "scene_idx": 2727,
+        "scene_id": "2727",
+        "score": -0.4868398606777191
+      },
+      {
+        "level": 5,
+        "rank": 1,
+        "scene_idx": 6331,
+        "scene_id": "6331",
+        "score": -0.4868541955947876
+      },
+      {
+        "level": 5,
+        "rank": 2,
+        "scene_idx": 3130,
+        "scene_id": "3130",
+        "score": -0.558509349822998
+      },
+      {
+        "level": 5,
+        "rank": 3,
+        "scene_idx": 6745,
+        "scene_id": "6745",
+        "score": -0.6989865303039551
+      },
+      {
+        "level": 5,
+        "rank": 4,
+        "scene_idx": 2438,
+        "scene_id": "2438",
+        "score": -0.9980130791664124
+      }
+    ]
+  }
+]
